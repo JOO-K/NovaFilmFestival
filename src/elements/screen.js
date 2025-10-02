@@ -30,7 +30,9 @@ export function createScreen({
 
   // --- Video element + base VideoTexture (NEVER change offset/repeat on THIS one)
   const video = document.createElement('video');
-  video.src = 'showreel.mp4';
+// must be root path (from /public)
+video.src = '/showreel.mp4';
+
   video.crossOrigin = 'anonymous';
   video.loop = true;
   video.muted = true;
